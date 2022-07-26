@@ -47,7 +47,7 @@ public class Main extends Application {
     
     private ConfigurableApplicationContext springBootApplicationContext() {
         SpringApplicationBuilder builder = new SpringApplicationBuilder(Main.class);
-        String[] args = getParameters().getRaw().stream().toArray(String[]::new);
+        String[] args = getParameters().getRaw().toArray(String[]::new);
         return builder.run(args);
     }
 
